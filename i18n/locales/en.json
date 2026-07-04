@@ -25,9 +25,9 @@
     "pitch": "I design and scale frontend architecture for high-stakes products — from a multi-step checkout at Russia's largest bank to offline-first PWAs for retail networks. 9+ years turning ambitious specs into fast, maintainable applications.",
     "ctaPrimary": "Get in touch",
     "ctaSecondary": "View projects",
-    "statsYearsLabel": "years in frontend",
-    "statsCompaniesLabel": "companies shipped in production",
-    "statsTeamLabel": "engineers led at Sber"
+    "statsClientsLabel": "happy clients",
+    "statsMvpLabel": "MVPs shipped",
+    "statsUsersLabel": "users across shipped projects"
   },
   "experience": {
     "title": "Experience",

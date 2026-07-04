@@ -1,15 +1,42 @@
 <script setup lang="ts">
 import { ArrowRight } from '@lucide/vue'
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 
 const heroStack = ['Vue 3', 'Nuxt 4', 'TypeScript', 'SSR/SSG', 'Pinia', 'gRPC', 'Docker']
 
 const stats = [
-  { value: '9+', labelKey: 'hero.statsYearsLabel' },
-  { value: '5', labelKey: 'hero.statsCompaniesLabel' },
-  { value: '4', labelKey: 'hero.statsTeamLabel' }
+  { target: 15, prefix: '', labelKey: 'hero.statsClientsLabel' },
+  { target: 6, prefix: '', labelKey: 'hero.statsMvpLabel' },
+  { target: 1000000, prefix: '>', labelKey: 'hero.statsUsersLabel' }
 ]
+
+const counts = ref(stats.map(() => 0))
+
+const displayValues = computed(() =>
+  stats.map((stat, index) => `${stat.prefix}${new Intl.NumberFormat(locale.value).format(counts.value[index])}`)
+)
+
+onMounted(() => {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+  if (reduceMotion) {
+    counts.value = stats.map((stat) => stat.target)
+    return
+  }
+
+  const duration = 1400
+  const start = performance.now()
+
+  function tick(now: number) {
+    const progress = Math.min((now - start) / duration, 1)
+    const eased = 1 - Math.pow(1 - progress, 3)
+    counts.value = stats.map((stat) => Math.round(stat.target * eased))
+    if (progress < 1) requestAnimationFrame(tick)
+  }
+
+  requestAnimationFrame(tick)
+})
 </script>
 
 <template>
@@ -31,8 +58,8 @@ const stats = [
       </div>
 
       <div class="hero__stats">
-        <div v-for="stat in stats" :key="stat.labelKey" class="hero__stat">
-          <span class="hero__stat-value">{{ stat.value }}</span>
+        <div v-for="(stat, index) in stats" :key="stat.labelKey" class="hero__stat">
+          <span class="hero__stat-value">{{ displayValues[index] }}</span>
           <span class="hero__stat-label">{{ t(stat.labelKey) }}</span>
         </div>
       </div>
@@ -131,6 +158,7 @@ const stats = [
   font-size: var(--text-3xl);
   font-weight: 700;
   color: var(--color-foreground);
+  font-variant-numeric: tabular-nums;
 }
 
 .hero__stat-label {
