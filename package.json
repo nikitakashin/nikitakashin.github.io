@@ -1,17 +1,29 @@
 {
-  "name": "nikitakashin-github-io",
-  "type": "module",
+  "name": "nikitakashin-portfolio",
   "private": true,
+  "type": "module",
   "scripts": {
-    "build": "nuxt build",
     "dev": "nuxt dev",
+    "build": "nuxt build",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "typecheck": "nuxt typecheck"
   },
   "dependencies": {
-    "nuxt": "npm:nuxt-nightly@5x",
-    "vue": "^3.5.35",
-    "vue-router": "^5.1.0"
+    "@lucide/vue": "^1.23.0",
+    "@nuxt/fonts": "^0.14.0",
+    "@nuxt/image": "^2.0.0",
+    "@nuxtjs/color-mode": "^4.0.1",
+    "@nuxtjs/i18n": "^10.4.0",
+    "@nuxtjs/robots": "^6.1.2",
+    "@nuxtjs/sitemap": "^8.2.2",
+    "vue": "^3.5.0",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "nuxt": "^4.4.8",
+    "sass": "^1.83.0",
+    "typescript": "^5.7.0"
   }
 }

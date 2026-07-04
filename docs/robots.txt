@@ -1,2 +1,7 @@
-User-Agent: *
-Disallow:
+# START nuxt-robots (indexable)
+User-agent: *
+Disallow: 
+
+Sitemap: https://nikitakashin.github.io/sitemap.xml
+Sitemap: https://nikitakashin.github.io/sitemap_index.xml
+# END nuxt-robots

@@ -1,0 +1,178 @@
+{
+  "meta": {
+    "title": "Nikita Kashin — Frontend Engineer & Architect",
+    "description": "Frontend Engineer / Architect with 9+ years building scalable Vue.js and Nuxt applications for enterprise products."
+  },
+  "header": {
+    "name": "Nikita Kashin",
+    "role": "Frontend Architect"
+  },
+  "nav": {
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "theme": {
+    "toggle": "Toggle color theme"
+  },
+  "lang": {
+    "switchTo": "Switch language"
+  },
+  "hero": {
+    "eyebrow": "Frontend Engineer / Architect",
+    "pitch": "I design and scale frontend architecture for high-stakes products — from a multi-step checkout at Russia's largest bank to offline-first PWAs for retail networks. 9+ years turning ambitious specs into fast, maintainable applications.",
+    "ctaPrimary": "Get in touch",
+    "ctaSecondary": "View projects",
+    "statsYearsLabel": "years in frontend",
+    "statsCompaniesLabel": "companies shipped in production",
+    "statsTeamLabel": "engineers led at Sber"
+  },
+  "experience": {
+    "title": "Experience",
+    "subtitle": "Nine years, five companies, one obsession: frontend architecture that survives contact with production.",
+    "present": "Present",
+    "jobs": {
+      "sber": {
+        "role": "Frontend Architect",
+        "summary": "Owned frontend architecture end-to-end for a large-scale Sber product, leading a team of 4 engineers from technical decisions to code quality.",
+        "bullets": [
+          "Designed and built the frontend architecture from scratch on Nuxt 4 (SSR, TypeScript, Nitro)",
+          "Built a full UI Kit / design system with design tokens and a Storybook documentation hub",
+          "Shipped an end-to-end multi-step checkout: tariffs, a service calculator, promo codes, delivery",
+          "Integrated 2GIS MapGL pickup points, Sber ID authentication and the Sber Spasibo loyalty program",
+          "Built the data layer on Pinia + Pinia Colada, connected to REST and gRPC/Protobuf services",
+          "Introduced a CSP security layer, product analytics and Graylog logging",
+          "Set the testing bar with Vitest unit tests and Playwright e2e, reviewed by the team"
+        ]
+      },
+      "itech": {
+        "role": "Senior Developer",
+        "summary": "Delivered a portfolio of enterprise B2B systems — from a supply-monitoring platform for a metallurgical company to a corporate PWA portal used by an entire retail network.",
+        "bullets": [
+          "Designed an offline-first PWA from scratch: Service Worker + Workbox caching, asset management, Push API",
+          "Built the corporate portal's component architecture and app shell on Vue 3 + Nuxt + TypeScript",
+          "Integrated Firebase for backend services and push notifications, Google reCAPTCHA for forms",
+          "Built an interactive SVG-based coverage map for complex corporate scenarios",
+          "Maintained and extended a production supply-monitoring service and Bitrix24 micro-apps"
+        ]
+      },
+      "sci": {
+        "role": "Software Engineer, Frontend",
+        "summary": "Built the web and mobile client for a large classifieds marketplace, including a real-time auction system.",
+        "bullets": [
+          "Contributed to an SSR architecture on Vue.js/Nuxt.js for a large classifieds platform",
+          "Built a live auction system over WebSocket with real-time bid synchronization",
+          "Shipped a companion mobile app on Vue + Cordova for Android and iOS",
+          "Integrated the frontend with backend services via JSON-RPC"
+        ]
+      },
+      "sfera": {
+        "role": "Software Engineer",
+        "summary": "Built a messenger web client and a multilingual corporate site from the ground up.",
+        "bullets": [
+          "Designed and built the ASAP messenger web client as a Vue 2 SPA with REST + WebSocket messaging",
+          "Built the UI on Vuetify with a consistent, responsive design system",
+          "Delivered a corporate site with CMS and multi-language content on Django + vanilla JS + SCSS",
+          "Built a complaints-handling backend service in Go (Gin)"
+        ]
+      },
+      "weblancer": {
+        "role": "Full-stack Developer",
+        "summary": "Freelanced on turnkey landing pages, corporate sites and integrations for four years — the foundation everything since is built on.",
+        "bullets": [
+          "Built responsive UIs for commercial web projects with HTML, SASS, JavaScript and jQuery",
+          "Delivered landing pages and corporate sites on WordPress and DataLife Engine",
+          "Integrated WebMoney and Payeer payment systems",
+          "Migrated sites from Tilda and Wix to custom hosting and CMS solutions"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "title": "Selected work",
+    "subtitle": "A mix of enterprise platforms, real-time systems and one open-source module I maintain for fun.",
+    "viewCode": "View code",
+    "filters": {
+      "all": "All",
+      "enterprise": "Enterprise",
+      "ecommerce": "E-commerce",
+      "realtime": "Real-time",
+      "pwa": "PWA",
+      "open-source": "Open-source"
+    },
+    "items": {
+      "sberCheckout": {
+        "title": "Sber checkout & product platform",
+        "description": "End-to-end frontend architecture for a large-scale banking product: multi-step checkout, service calculator, map-based pickup points and loyalty integration, built on Nuxt 4 with a shared design system.",
+        "metric": "Team of 4 engineers · in production since 2025"
+      },
+      "supplyMonitoring": {
+        "title": "Supply monitoring platform",
+        "description": "Production monitoring system for a metallurgical enterprise's supply chain, extended with new business features on top of a legacy Vue 2 / Bitrix24 codebase.",
+        "metric": "Enterprise B2B · legacy modernization"
+      },
+      "retailPwa": {
+        "title": "Retail corporate PWA",
+        "description": "Offline-first progressive web app for a retail network's employees, with Service Worker caching, push notifications and an interactive SVG coverage map.",
+        "metric": "Offline-first · built from zero to production"
+      },
+      "marketplace": {
+        "title": "Classifieds marketplace",
+        "description": "Web and mobile client for an Avito-style classifieds platform, with an SSR architecture and a real-time WebSocket auction system.",
+        "metric": "Web + Cordova mobile · real-time auctions"
+      },
+      "asapMessenger": {
+        "title": "ASAP messenger",
+        "description": "Vue 2 SPA messenger client with REST + WebSocket real-time delivery, contacts, notifications and message status.",
+        "metric": "Real-time messaging · Vuetify design system"
+      },
+      "essentia": {
+        "title": "nuxt-module-essentia",
+        "description": "Open-source Nuxt module wrapping Essentia.js for in-browser audio analysis — pitch, tempo and onset detection without a server round-trip.",
+        "metric": "Open-source · MIT license"
+      }
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "The stack behind nine years of shipping frontend architecture.",
+    "groups": {
+      "core": { "label": "Languages & core" },
+      "frameworks": { "label": "Frameworks" },
+      "architecture": { "label": "Architecture & integrations" },
+      "tools": { "label": "Tools" },
+      "testing": { "label": "Testing" },
+      "ai": { "label": "AI & dev tooling" }
+    }
+  },
+  "about": {
+    "title": "About",
+    "paragraphs": [
+      "I've spent 9+ years designing frontend architecture for complex web applications, enterprise systems and product platforms — mostly on Vue.js and Nuxt.",
+      "My approach is layered architecture: separating business logic, UI and the data layer so products stay maintainable as they scale. I've taken products from zero to MVP and carried them into production, and led migrations across Vue 2 → 3, Nuxt 2 → 3 → 4, and PHP → Nuxt 4.",
+      "Beyond the framework, I work across the wider web platform — TypeScript, browser APIs, WebSocket, SSR, and backend integration through REST, JSON-RPC and gRPC. I test what I build, with Playwright, Vitest, Cypress and Jest.",
+      "Outside of work I follow AI and developer tooling closely — Cursor, Claude Code, local LLMs, n8n — and maintain an open-source Nuxt module for audio analysis."
+    ],
+    "education": { "label": "Education", "value": "Higher education, KubSAU — 2021" },
+    "languages": { "label": "Languages", "russian": "Russian — native", "english": "English — B2" }
+  },
+  "contact": {
+    "title": "Let's build something",
+    "pitch": "Open to Architect and Senior Frontend roles, and to consulting on Vue/Nuxt migrations. Based in Bishkek, available for travel.",
+    "cta": "Ready to discuss a project",
+    "labels": {
+      "phone": "Phone",
+      "email": "Email",
+      "telegram": "Telegram",
+      "location": "Location",
+      "github": "GitHub",
+      "hh": "hh.ru profile"
+    },
+    "location": "Bishkek, Kyrgyzstan"
+  },
+  "footer": {
+    "rights": "Built with Nuxt · {year}"
+  }
+}

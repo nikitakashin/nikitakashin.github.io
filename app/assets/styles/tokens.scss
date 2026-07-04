@@ -1,0 +1,93 @@
+// Blueprint — design tokens
+// Dark is the primary theme (developer/technical audience); light is a fully designed alternative.
+
+:root,
+.dark {
+  --color-background: #0a0e14;
+  --color-surface: #121821;
+  --color-surface-raised: #1a2230;
+  --color-foreground: #e7ecf3;
+  --color-foreground-muted: #8b98a9;
+  --color-border: #2a3542;
+  --color-border-strong: #3a4656;
+
+  --color-accent: #4cc9f0;
+  --color-on-accent: #06131a;
+  --color-accent-soft: rgba(76, 201, 240, 0.12);
+
+  --color-destructive: #f2555a;
+  --color-on-destructive: #1a0a0b;
+  --color-success: #22c55e;
+
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.28);
+  --grid-line: rgba(76, 201, 240, 0.06);
+}
+
+.light {
+  --color-background: #f7f8fa;
+  --color-surface: #ffffff;
+  --color-surface-raised: #ffffff;
+  --color-foreground: #10151c;
+  --color-foreground-muted: #5b6674;
+  --color-border: #dde3ea;
+  --color-border-strong: #c7d0da;
+
+  --color-accent: #0369a1;
+  --color-on-accent: #ffffff;
+  --color-accent-soft: rgba(3, 105, 161, 0.08);
+
+  --color-destructive: #dc2626;
+  --color-on-destructive: #ffffff;
+  --color-success: #16a34a;
+
+  --shadow-card: 0 1px 2px rgba(16, 21, 28, 0.04), 0 8px 24px rgba(16, 21, 28, 0.06);
+  --grid-line: rgba(3, 105, 161, 0.05);
+}
+
+:root {
+  // Typography
+  --font-display: 'Unbounded', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --text-xs: 0.75rem; // 12
+  --text-sm: 0.875rem; // 14
+  --text-base: 1rem; // 16
+  --text-lg: 1.125rem; // 18
+  --text-xl: 1.25rem; // 20
+  --text-2xl: 1.5rem; // 24
+  --text-3xl: 2rem; // 32
+  --text-4xl: 2.5rem; // 40
+  --text-5xl: clamp(2.25rem, 5vw + 1rem, 3.5rem); // 36 -> 56 hero
+
+  --leading-tight: 1.15;
+  --leading-snug: 1.35;
+  --leading-normal: 1.6;
+
+  // Spacing (4/8 rhythm)
+  --space-1: 0.25rem; // 4
+  --space-2: 0.5rem; // 8
+  --space-3: 0.75rem; // 12
+  --space-4: 1rem; // 16
+  --space-6: 1.5rem; // 24
+  --space-8: 2rem; // 32
+  --space-12: 3rem; // 48
+  --space-16: 4rem; // 64
+  --space-24: 6rem; // 96
+  --space-32: 8rem; // 128
+
+  // Radius — precise, not bubbly
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  // Motion
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 150ms;
+  --duration-base: 220ms;
+  --duration-slow: 300ms;
+
+  // Layout
+  --container-max: 1200px;
+  --header-height: 72px;
+}

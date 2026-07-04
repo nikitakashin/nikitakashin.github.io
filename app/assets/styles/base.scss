@@ -1,0 +1,108 @@
+@use 'mixins' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+  -webkit-text-size-adjust: 100%;
+}
+
+html.light {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  line-height: var(--leading-tight);
+  font-weight: 700;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  @include container;
+}
+
+// Theme toggle icon swap is CSS-only (not a v-if) so server/client hydration
+// never has to guess which icon the resolved color-mode implies.
+.theme-toggle__icon--moon {
+  display: none;
+}
+
+html.light .theme-toggle__icon--sun {
+  display: none;
+}
+
+html.light .theme-toggle__icon--moon {
+  display: inline-flex;
+}
+
+.section {
+  padding-block: var(--space-24);
+}
+
+@include breakpoint-up(md) {
+  .section {
+    padding-block: var(--space-32);
+  }
+}
+
+::selection {
+  background: var(--color-accent-soft);
+  color: var(--color-foreground);
+}
+
+:focus-visible {
+  @include focus-ring;
+}
+
+* {
+  transition-property: color, background-color, border-color;
+  transition-duration: var(--duration-base);
+  transition-timing-function: var(--ease-out-expo);
+}
+
+@include reduced-motion {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

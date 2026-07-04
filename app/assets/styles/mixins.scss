@@ -1,0 +1,33 @@
+@mixin breakpoint-up($size) {
+  @if $size == sm {
+    @media (min-width: 375px) { @content; }
+  } @else if $size == md {
+    @media (min-width: 768px) { @content; }
+  } @else if $size == lg {
+    @media (min-width: 1024px) { @content; }
+  } @else if $size == xl {
+    @media (min-width: 1440px) { @content; }
+  }
+}
+
+@mixin focus-ring {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+@mixin container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--space-4);
+
+  @include breakpoint-up(md) {
+    padding-inline: var(--space-8);
+  }
+}
+
+@mixin reduced-motion {
+  @media (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}
