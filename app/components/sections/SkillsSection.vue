@@ -7,7 +7,7 @@ const { t } = useI18n()
 <template>
   <section id="skills" class="section skills">
     <div class="container">
-      <SectionHeading index="03" :title="t('skills.title')" :subtitle="t('skills.subtitle')" />
+      <SectionHeading index="05" :title="t('skills.title')" :subtitle="t('skills.subtitle')" />
 
       <div class="skills__grid">
         <div v-for="group in skillGroups" :key="group.id" class="skills__group">

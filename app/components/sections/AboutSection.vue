@@ -8,7 +8,7 @@ const paragraphs = computed(() => (tm('about.paragraphs') as unknown[]).map((ite
   <section id="about" class="section about">
     <div class="container about__layout">
       <div class="about__prose">
-        <SectionHeading index="04" :title="t('about.title')" />
+        <SectionHeading index="06" :title="t('about.title')" />
         <p v-for="(paragraph, index) in paragraphs" :key="index">{{ paragraph }}</p>
       </div>
 

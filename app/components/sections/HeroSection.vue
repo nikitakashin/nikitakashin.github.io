@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { ArrowRight } from '@lucide/vue'
 
-const { t, locale } = useI18n()
+const { t, tm, rt, locale } = useI18n()
 
-const heroStack = ['Vue 3', 'Nuxt 4', 'TypeScript', 'SSR/SSG', 'Pinia', 'gRPC', 'Docker']
+const heroStack = computed(() => (tm('hero.stack') as unknown[]).map((item) => rt(item)))
 
 const stats = [
-  { target: 15, prefix: '', labelKey: 'hero.statsClientsLabel' },
-  { target: 6, prefix: '', labelKey: 'hero.statsMvpLabel' },
+  { target: 10, prefix: '', labelKey: 'hero.statsYearsLabel' },
+  { target: 4, prefix: '', labelKey: 'hero.statsTeamLabel' },
   { target: 1000000, prefix: '>', labelKey: 'hero.statsUsersLabel' }
 ]
 

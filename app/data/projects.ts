@@ -4,7 +4,7 @@ export interface ProjectEntry {
   id: string
   category: ProjectCategory
   stack: string[]
-  links?: { github?: string; live?: string }
+  links?: { github?: string; live?: string; caseStudy?: string }
   featured?: boolean
 }
 
@@ -13,6 +13,7 @@ export const projects: ProjectEntry[] = [
     id: 'sberCheckout',
     category: 'enterprise',
     stack: ['Vue 3', 'Nuxt 4', 'Nitro', 'Pinia Colada', 'gRPC', '2GIS MapGL', 'Storybook'],
+    links: { caseStudy: '#experience' },
     featured: true
   },
   {

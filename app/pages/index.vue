@@ -21,13 +21,13 @@ useHead({
         '@context': 'https://schema.org',
         '@type': 'Person',
         name: 'Nikita Kashin',
-        jobTitle: 'Frontend Architect',
+        jobTitle: t('header.role'),
         url: 'https://nikitakashin.github.io',
         image: 'https://nikitakashin.github.io/og-image.png',
         email: 'mailto:rop-2012@bk.ru',
         address: { '@type': 'PostalAddress', addressLocality: 'Bishkek', addressCountry: 'KG' },
         sameAs: ['https://github.com/nikitakashin', 'https://t.me/FrontendOverlord'],
-        knowsAbout: ['Vue.js', 'Nuxt', 'TypeScript', 'Frontend architecture', 'SSR', 'PWA']
+        knowsAbout: ['Software architecture', 'Vue.js', 'Nuxt', 'TypeScript', 'Python', 'AI engineering', 'System design']
       })
     }
   ]
@@ -39,6 +39,8 @@ useHead({
     <HeroSection />
     <ExperienceSection />
     <ProjectsSection />
+    <PrinciplesSection />
+    <FocusSection />
     <SkillsSection />
     <AboutSection />
     <ContactSection />

@@ -14,7 +14,7 @@ const contactLinks = [
 <template>
   <section id="contact" class="section contact">
     <div class="container">
-      <SectionHeading index="05" :title="t('contact.title')" :subtitle="t('contact.pitch')" />
+      <SectionHeading index="07" :title="t('contact.title')" :subtitle="t('contact.pitch')" />
 
       <div class="contact__grid">
         <component

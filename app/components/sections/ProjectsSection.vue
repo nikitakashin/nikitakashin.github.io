@@ -37,16 +37,26 @@ const { activeFilter, availableFilters, filteredProjects } = useProjects()
             </li>
           </ul>
 
-          <a
-            v-if="project.links?.github"
-            :href="project.links.github"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="project-card__link"
-          >
-            {{ t('projects.viewCode') }}
-            <ArrowUpRight :size="16" :stroke-width="2" />
-          </a>
+          <div v-if="project.links?.github || project.links?.caseStudy" class="project-card__links">
+            <a
+              v-if="project.links?.caseStudy"
+              :href="project.links.caseStudy"
+              class="project-card__link"
+            >
+              {{ t('projects.readCaseStudy') }}
+              <ArrowUpRight :size="16" :stroke-width="2" />
+            </a>
+            <a
+              v-if="project.links?.github"
+              :href="project.links.github"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-card__link"
+            >
+              {{ t('projects.viewCode') }}
+              <ArrowUpRight :size="16" :stroke-width="2" />
+            </a>
+          </div>
         </BaseCard>
       </div>
     </div>
@@ -137,6 +147,12 @@ const { activeFilter, availableFilters, filteredProjects } = useProjects()
   list-style: none;
   margin: 0 0 var(--space-4);
   padding: 0;
+}
+
+.project-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
 }
 
 .project-card__link {
